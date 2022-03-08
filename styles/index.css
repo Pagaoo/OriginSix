@@ -53,13 +53,9 @@ h1 {
 nav {
     height: var(--header-height);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
-}
-
-main {
-   margin-top: var(--header-height);
 }
 
 .logo {
@@ -69,6 +65,10 @@ main {
 
 .logo span {
     color: var(--base-color);
+}
+
+main {
+   margin-top: var(--header-height);
 }
 
 .container {
@@ -85,19 +85,19 @@ main {
     padding: 5rem 0;
 }
 
-#inicio {
+#home {
     overflow: hidden;
 }
 
-#inicio .container{
+#home .container{
     margin: 0;
 }
 
-#inicio .image {
+#home .image {
     position: relative;
 }
 
-#inicio .image::before {
+#home .image::before {
     content: '';
     height: 100%;
     width: 100%;
@@ -108,26 +108,26 @@ main {
     z-index: 0;
 }
 
-#inicio .image img {
+#home .image img {
     position: relative;
     right: 2.93rem;
 }
 
-#inicio .image img,
-#inicio .image::before {
+#home .image img,
+#home .image::before {
     border-radius: 0.25rem;
 }
 
-#inicio .text {
+#home .text {
     margin: 0 1.5rem 0 1.5rem;
     text-align: center;
 }
 
-#inicio .text h1{
+#home .text h1{
     margin: 1rem;
 }
 
-#inicio .text p {
+#home .text p {
     margin-bottom: 2rem;
 }
 
