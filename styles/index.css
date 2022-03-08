@@ -14,10 +14,12 @@ img {
 }
 
 :root {
-    --base-color: hsla(159, 36%, 57%, 1);
-    --base-color-second: hsla(159, 65%, 88%, 1);
+    --header-height: 4.5rem;/*72px / 16px = 4.5rem. Usar sempre unidade relativa (rem) para design responsivo*/
+    --hue: 159;
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
     --base-color-alt: hsl(var(--hue) 57% 53%);
-    --title-color: hsla(159, 41%, 10%, 1);
+    --title-color: hsl(var(--hue) 41% 10%);
     --text-color: hsl(0 0% 46%);
     --text-color-light: hsl(0 0% 98%);
     --body-color: hsl(0 0% 98%);
@@ -39,13 +41,25 @@ h1 {
 #header {
     border-bottom: 1px solid #E4E4E4;
     margin-bottom: 2rem;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--body-color);
 }
 
 nav {
-    height: 4.5rem; /*72px / 16px = 4.5rem. Usar sempre unidade relativa (rem) para design responsivo*/
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+}
+
+main {
+   margin-top: var(--header-height);
 }
 
 .logo {
@@ -58,10 +72,84 @@ nav {
 }
 
 .container {
-    width: 100%;
-    margin: 0 1.5rem 0 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
 }
 
 .section {
     padding: 5rem 0;
+}
+
+#inicio {
+    overflow: hidden;
+}
+
+#inicio .container{
+    margin: 0;
+}
+
+#inicio .image {
+    position: relative;
+}
+
+#inicio .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -16.8%;
+    left: 16.8%;
+    z-index: 0;
+}
+
+#inicio .image img {
+    position: relative;
+    right: 2.93rem;
+}
+
+#inicio .image img,
+#inicio .image::before {
+    border-radius: 0.25rem;
+}
+
+#inicio .text {
+    margin: 0 1.5rem 0 1.5rem;
+    text-align: center;
+}
+
+#inicio .text h1{
+    margin: 1rem;
+}
+
+#inicio .text p {
+    margin-bottom: 2rem;
+}
+
+.button {
+    background-color: var(--base-color);
+    color: var(--text-color-light);
+    display: inline-flex;
+    height: 3.5rem;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+    font: 500 1rem "DM Sans", sans-serif;
+    transition: background 0.5s;
+}
+
+.button:hover {
+    background: var(--base-color-alt);
+}
+
+.divider-1 {
+    height: 1px;
+    background: linear-gradient(270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%);
 }
