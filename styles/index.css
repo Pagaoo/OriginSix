@@ -29,6 +29,10 @@ ul {
     --body-color: hsl(0 0% 98%);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font: 400 1rem "DM Sans", sans-serif;
     background-color: var(--body-color);
@@ -52,6 +56,10 @@ body {
     left: 0;
     z-index: 100;
     background-color: var(--body-color);
+}
+
+#header.scroll {
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 main {
@@ -94,10 +102,19 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-
 nav .menu {
     opacity: 0;
     visibility: hidden;
+    top: -20rem;
+    transition: .2s;
+}
+
+nav .menu ul {
+    display: none;
+}
+
+nav.show .menu ul {
+    display: grid;
 }
 
 /*Quando não tem espaço, o nav vai receber a classe show*/
@@ -130,11 +147,14 @@ nav .icon-close {
     opacity: 0;
     position: absolute;
     right: 1.5rem;
+    transition: .2s;
+    top: -1.5rem;
 }
 
 nav.show div.icon-close {
     visibility: visible;
     opacity: 1;
+    top: 1.5rem;
 }
 
 
