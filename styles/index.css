@@ -161,6 +161,18 @@ nav.show div.icon-close {
     padding: 5rem 0;
 }
 
+.section .title {
+    margin-bottom: 1rem;
+}
+
+.section header {
+    margin-bottom: 4rem;
+}
+
+.section header strong {
+    color: var(--base-color);
+}
+
 #home {
     overflow: hidden;
 }
@@ -199,10 +211,6 @@ nav.show div.icon-close {
     text-align: center;
 }
 
-#home .text h2{
-    margin: 1rem;
-}
-
 #home .text p {
     margin-bottom: 2rem;
 }
@@ -232,8 +240,12 @@ nav.show div.icon-close {
 }
 
 #about {
-    margin-top: calc(var(--header-height) + 5rem);
+    background-color: white;
  }
+
+#about .container {
+    margin: 0;
+}
 
 #about .image {
     position: relative;
@@ -241,7 +253,6 @@ nav.show div.icon-close {
 
 #about .image img {
     position: relative;
-    width: 100%;
 }
 
 #about .image::before {
@@ -250,8 +261,8 @@ nav.show div.icon-close {
     width: 100%;
     background: var(--base-color-second);
     position: absolute;
-    bottom: 16.8%;
-    right: 16.8%;
+    top: -8.3%;
+    left: -33%;
     z-index: 0;
 }
 
@@ -262,7 +273,6 @@ nav.show div.icon-close {
 
 #about .text {
     margin: 0 1.5rem 0 1.5rem;
-    text-align: left;
 }
 
 #about .text h2 {
