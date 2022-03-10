@@ -13,6 +13,10 @@ img {
     height: auto;
 }
 
+ul {
+    list-style: none;
+}
+
 :root {
     --header-height: 4.5rem;/*72px / 16px = 4.5rem. Usar sempre unidade relativa (rem) para design responsivo*/
     --hue: 159;
@@ -32,7 +36,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+.title {
     font: 700 1.85rem "Poppins", sans-serif;
     color: var(--title-color);
     -webkit-font-smoothing: auto;
@@ -50,12 +54,68 @@ h1 {
     background-color: var(--body-color);
 }
 
+main {
+    margin-top: calc(var(--header-height) + 4rem);
+ }
+
 nav {
     height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    transition: color 0.4s;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--base-color);
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--base-color);
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    transition: width 1s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+nav .menu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*Quando não tem espaço, o nav vai receber a classe show*/
+nav.show .menu{
+    opacity: 1;
+    visibility: visible;
+    background: var(--body-color);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+}
+
+nav.show ul.grid {
+    gap: 4rem;
 }
 
 .logo {
@@ -65,10 +125,6 @@ nav {
 
 .logo span {
     color: var(--base-color);
-}
-
-main {
-   margin-top: var(--header-height);
 }
 
 .container {
