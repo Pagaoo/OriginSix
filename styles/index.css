@@ -199,7 +199,7 @@ nav.show div.icon-close {
     text-align: center;
 }
 
-#home .text h1{
+#home .text h2{
     margin: 1rem;
 }
 
@@ -212,6 +212,7 @@ nav.show div.icon-close {
     color: var(--text-color-light);
     display: inline-flex;
     height: 3.5rem;
+    width: 13.375rem;
     align-items: center;
     padding: 0 2rem;
     border-radius: 0.25rem;
@@ -226,6 +227,55 @@ nav.show div.icon-close {
 .divider-1 {
     height: 1px;
     background: linear-gradient(270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%);
+}
+
+#about {
+    margin-top: calc(var(--header-height) + 5rem);
+ }
+
+#about .image {
+    position: relative;
+}
+
+#about .image img {
+    position: relative;
+    width: 100%;
+}
+
+#about .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    bottom: 16.8%;
+    right: 16.8%;
+    z-index: 0;
+}
+
+#about .image img,
+#about .image::before {
+    border-radius: 0.25rem;
+}
+
+#about .text {
+    margin: 0 1.5rem 0 1.5rem;
+    text-align: left;
+}
+
+#about .text h2 {
+    margin-bottom: 1rem;
+}
+
+#about .text p {
+    margin-bottom: 2rem;
+}
+
+.divider-2 {
+    height: 1px;
+    background: linear-gradient(170deg,
     hsla(var(--hue), 36%, 57%, 1) 0%,
     hsla(var(--hue), 65%, 88%, 0.34) 100%);
 }
