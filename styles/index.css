@@ -390,3 +390,22 @@ nav.show div.icon-close {
 #testimonials .swiper-pagination-bullet-active {
     background: var(--base-color);
 }
+
+#contact .grid {
+    gap: 4rem;
+}
+
+#contact .text p {
+    margin-bottom: 2rem;
+}
+
+#contact .button {
+    width: 14.75rem;
+}
+
+#contact .button i {
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+}
+
+
