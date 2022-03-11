@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
@@ -92,9 +93,60 @@
         <div class="divider-1"></div>
 
         <section class="section" id="testimonials">
+            <div class="container swiper">
+                <header>
+                    <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+                </header>
+                <div class="testimonials swiper">
+                    <div class="swiper-wrapper">
+                        <div class="testimonial swiper-slide">
+                            <blockquote><!--Tag para citação/depoimentos etc-->
+                                <p>
+                                    <span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.  
+                                </p>
+                                <cite><!--quem está fazendo a citação-->
+                                    <img src="/imgs/profile-imgs/Img-profile-testimonials.svg" alt="Foto de Wanessa">
+                                    Wanessa Souza
+                                </cite>
+                            </blockquote>
+                        </div>
+    
+                        <div class="testimonial swiper-slide">
+                            <blockquote><!--Tag para citação/depoimentos etc-->
+                                <p>
+                                    <span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.  
+                                </p>
+                                <cite><!--quem está fazendo a citação-->
+                                    <img src="/imgs/profile-imgs/Img-profile-testimonials2.svg" alt="Foto de Luna">
+                                    Luna Falcão
+                                </cite>
+                            </blockquote>
+                        </div>
+    
+                        <div class="testimonial swiper-slide">
+                            <blockquote><!--Tag para citação/depoimentos etc-->
+                                <p>
+                                    <span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.  
+                                </p>
+                                <cite><!--quem está fazendo a citação-->
+                                    <img src="/imgs/profile-imgs/Img-profile-testimonials3.jpg" alt="Foto de Franciele">
+                                    Franciele Venega
+                                </cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-2"></div>
+
+        <section class="section" id="contact">
 
         </section>
 
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> <!--colocar antes do script criado porque o esse script "main.js" irá precisar de funcionalidade do script do swiper-->
         <script src="main.js"></script>
 </body>
 </html>
