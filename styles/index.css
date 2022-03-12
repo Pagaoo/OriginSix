@@ -63,7 +63,7 @@ body {
 }
 
 main {
-    margin-top: calc(var(--header-height) + 4rem);
+    margin-top: calc(var(--header-height) + 2rem);
  }
 
 nav {
