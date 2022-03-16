@@ -477,3 +477,12 @@ footer .social a:hover {
     opacity: 1;
     transform: translateY(0%);
 }
+
+/*media queries*/
+/*extra large devices: 1200 > */
+/*large devices: 1023 > */
+/*large devices: 992 >*/
+@media (min-width: 992px) {
+
+}
+/*medium devices: > 767*/
