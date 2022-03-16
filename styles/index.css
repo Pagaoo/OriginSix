@@ -422,3 +422,11 @@ nav.show div.icon-close {
 #contact ul li i {
     color: var(--base-color);
 }
+
+#footer {
+    background-color: var(--base-color);
+}
+
+#footer .logo {
+    
+}
