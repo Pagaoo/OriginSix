@@ -423,10 +423,29 @@ nav.show div.icon-close {
     color: var(--base-color);
 }
 
-#footer {
+footer {
     background-color: var(--base-color);
 }
 
-#footer .logo {
-    
+.logo-alt span{
+    color: var(--body-color);
+}
+
+footer .logo {
+    display: inline-block; /*a tag 'a' é um display inline, logo não aceita margin*/
+    margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+    color: var(--text-color-light);
+    margin-bottom: 0.75rem;
+}
+
+footer .social i {
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+}
+
+footer .social a{
+    margin-right: 2rem;
 }
