@@ -16,16 +16,16 @@ for (const link of links) {
   });
 }
 
-const header = document.querySelector("#header");
-const navHeight = header.offsetHeight;
+function changeHeader() {
+  const header = document.querySelector("#header");
+  const navHeight = header.offsetHeight;
 
-window.addEventListener("scroll", function () {
   if (window.scrollY >= navHeight) {
     header.classList.add("scroll");
   } else {
     header.classList.remove("scroll");
   }
-});
+}
 
 /*Swiper*/
 const swiper = new Swiper(".swiper", {
@@ -51,6 +51,23 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links`,
+  #contact .text, #contact .links,
+  #footer .brand, #footer .social`,
   { interval: 100 }
 );
+
+/* Back to top button */
+
+function backToTop() {
+  const backToTopBtn = document.querySelector(".back-to-top");
+  if (window.scrollY >= 560) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+}
+
+window.addEventListener("scroll", function () {
+  changeHeader();
+  backToTop();
+});
